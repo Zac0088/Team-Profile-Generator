@@ -8,4 +8,30 @@ const intern = require("./lib/intern");
 const manager = require("./lib/manager");
 const employeeArray = [];
 
-function
+function addEmployee() {
+    inquirer
+        .createPromptModule([
+            {
+                type: "input",
+                message: "What is your name?",
+                name: "name",
+            },
+            {
+                type: "input",
+                message: "ID number?",
+                name: "id",
+            },
+            {
+                type: "input",
+                messge: "Your email adress?",
+                name: "email",
+            },
+            {
+                type: "list",
+                messagfe: "Your role?",
+                name: "role",
+                choices: ["Engineer", "Intern", "manager"],
+            },
+        ])
+        .then(as)
+}
