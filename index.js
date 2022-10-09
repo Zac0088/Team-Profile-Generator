@@ -3,10 +3,10 @@ const fs = require('fs');
 const renderHtml = require('./template/template')
 const { inherits } = require("util");
 
-const employee = require("./lib/employee");
-const engineer = require("./lib/engineer");
-const intern = require("./lib/intern");
-const manager = require("./lib/manager");
+const Employee = require("./lib/employee");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
+const Manager = require("./lib/manager");
 let employees = [];
 
 init = () => {
@@ -33,4 +33,30 @@ init = () => {
                 messagfe: "Office number?",
                 name: "officeNumber"
             }
-        ]).then(
+        ]).then((response)=> {
+            response.role = "Manager";
+            const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
+            employees.push(manager);
+            employeeRole();
+        })
+    };
+    employeeRole = () => {
+        console.log();
+        return inquirer .prompt([
+            {
+                type: "list",
+                message: "Employee role?",
+                name: "role",
+                choices: [
+                    "Engineer",
+                    "Intern"
+                ]
+            }
+        ]).then(response => {
+            if (response.role==="Engineer") {
+                addEngineer();
+            }else {
+                addIntern();
+            }
+        })
+    };
