@@ -60,3 +60,32 @@ init = () => {
             }
         })
     };
+addEngineer = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            message: "Engineer name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "engineers ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "Engineers email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "Engineers Githun?",
+            name: "github"
+        }
+    ]).then((response)=> {
+        response.roll = "Engineer";
+        const engineer = new Engineer(response.name, response.id, response.email, response.github);
+        employees.push(engineer);
+        addEmployee();
+    })
+};
