@@ -89,3 +89,33 @@ addEngineer = () => {
         addEmployee();
     })
 };
+addIntern = () => {
+    console.log();
+    return inquirer.prompt([
+        {
+            type: "input",
+            message: "Interns name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            messgae: "Intern ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "Intern Email?",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "Interns Schools name?",
+            name: "school"
+        }
+    ]).then((response)=> {
+        response.role = "Intern";
+        const intern = new Intern(response.name, response.id, response.email, response.school);
+        employees.push(intern);
+        addEmployee();
+    })
+};
