@@ -1,37 +1,36 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const path = require('path');
+const renderHtml = require('./template/template')
+const { inherits } = require("util");
 
 const employee = require("./lib/employee");
 const engineer = require("./lib/engineer");
 const intern = require("./lib/intern");
 const manager = require("./lib/manager");
-const employeeArray = [];
+let employees = [];
 
-function addEmployee() {
-    inquirer
-        .createPromptModule([
+init = () => {
+    console.log();
+    return inquirer
+        .prompt([
             {
                 type: "input",
-                message: "What is your name?",
-                name: "name",
+                message: "Managers name?",
+                name: "name"
             },
             {
                 type: "input",
-                message: "ID number?",
-                name: "id",
+                message: "Manager ID number?",
+                name: "id"
             },
             {
                 type: "input",
                 messge: "Your email adress?",
-                name: "email",
+                name: "email"
             },
             {
-                type: "list",
-                messagfe: "Your role?",
-                name: "role",
-                choices: ["Engineer", "Intern", "manager"],
-            },
-        ])
-        .then(as)
-}
+                type: "input",
+                messagfe: "Office number?",
+                name: "officeNumber"
+            }
+        ]).then(
