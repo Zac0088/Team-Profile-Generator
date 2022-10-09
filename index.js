@@ -119,3 +119,18 @@ addIntern = () => {
         addEmployee();
     })
 };
+addEmployee = () => {
+    console.log();
+    return inquirer.prompt([
+        {
+            type: "list",
+            message: "Do you want to add more team members?",
+            name: "add",
+            choices: [ "Yes", "No"]
+        }
+    ]).then(response => {
+        if (response.add === "yes") {
+            employeeRole();
+        } else { renderEmployees();}
+    })
+};
