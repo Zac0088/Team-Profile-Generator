@@ -1,4 +1,4 @@
-function managerCard {
+function managerCard() {
     return `<div class="col">
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">
@@ -13,7 +13,7 @@ function managerCard {
     </div>`;
 }
 
-function engineerCard {
+function engineerCard() {
     return `<div class="col">
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">
@@ -28,7 +28,7 @@ function engineerCard {
     </div>`;
 }
 
-function internCard {
+function internCard() {
     return `<div class="col">
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">

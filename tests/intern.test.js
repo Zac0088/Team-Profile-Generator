@@ -3,7 +3,7 @@ describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
             const obj = new Intern();
-            expect(typeof (obj)).tobe("object");
+            expect(typeof (obj)).toBe("object");
         })
         describe("getSchool", () => {
             it("return name of school", ()=>{

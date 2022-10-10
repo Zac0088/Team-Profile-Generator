@@ -3,9 +3,9 @@ describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
             const obj = new Manager();
-            expect(typeof (obj)).tobe("object");
+            expect(typeof (obj)).toBe("object");
         })
-        describe("getOfficeNumber function", () => {
+        describe("getOfficeNumber", () => {
             it("return office number ",()=>{
             const obj = new Manager('Bob', '3', 'testemail@gmail.com', '22');
             expect(obj.getOfficeNumber()).toBe('22');

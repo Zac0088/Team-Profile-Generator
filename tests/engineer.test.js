@@ -3,7 +3,7 @@ describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
             const obj = new Engineer();
-            expect(typeof (obj)).tobe("object");
+            expect(typeof (obj)).toBe("object");
         })
         describe("getGithub function", () => {
             it("return Github name",()=>{
