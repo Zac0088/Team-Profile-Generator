@@ -135,4 +135,14 @@ addEmployee = () => {
     })
 };
 
-renderHtml
+renderEmployees = () => {
+    const employeeTemplate = renderHtml(employees);
+    fs.writeFile('./dist/index.html', employeeTemplate, (error) => {
+        if (error){
+            console.log("error")
+        }else{
+            console.log("success");
+        }
+})
+}
+init()
