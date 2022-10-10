@@ -1,13 +1,14 @@
-const Engineer = require('../lib/engineer')
+const Manager = require('../lib/manager')
 describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
-            const obj = new Employee();
+            const obj = new Manager();
             expect(typeof (obj)).tobe("object");
         })
-        describe("getName function", () => {
-            const obj = new Employee('Jimbob');
-            expect(obj.getName()).tobe('Jimbob');
+        describe("getOfficeNumber function", () => {
+            it("return office number ",()=>{
+            const obj = new Manager('Bob', '3', 'testemail@gmail.com', '22');
+            expect(obj.getOfficeNumber()).tobe('22');
         })
     })
-});
+})});
