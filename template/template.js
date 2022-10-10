@@ -6,7 +6,7 @@ function managerCard(manager) {
                 <h1>${manager.getRole()}</h1>
                 <h2 class="card-title">${manager.getName()}</h2>
                 <p class ="card-text">ID: ${manager.getId()}</p>
-                <p class ="card-text">${manager.getEmail()}</p>
+                <p class ="card-text">Email: ${manager.getEmail()}</p>
                 <p class ="card-text">Office Number: ${manager.getOfficeNumber()}</p>
             </div>
         </div>
@@ -21,7 +21,7 @@ function engineerCard(engineer) {
                 <h1>${engineer.getRole()}</h1>
                 <h2 class="card-title">${engineer.getName()}</h2>
                 <p class ="card-text">ID: ${engineer.getId()}</p>
-                <p class ="card-text">${engineer.getEmail()}</p>
+                <p class ="card-text">Email: ${engineer.getEmail()}</p>
                 <p class ="card-text">Github: ${engineer.getGithub()}</p>
             </div>
         </div>
@@ -36,7 +36,7 @@ function internCard(intern) {
                 <h1>${intern.getRole()}</h1>
                 <h2 class="card-title">${intern.getName()}</h2>
                 <p class ="card-text">ID: ${intern.getId()}</p>
-                <p class ="card-text">${intern.getEmail()}</p>
+                <p class ="card-text">Email: ${intern.getEmail()}</p>
                 <p class ="card-text">School: ${intern.getSchool()}</p>
             </div>
         </div>

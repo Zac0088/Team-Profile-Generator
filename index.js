@@ -128,7 +128,7 @@ addEmployee = () => {
             choices: ["Yes", "No"]
         }
     ]).then(response => {
-        if (response.add === "yes") {
+        if (response.add === "Yes") {
             employeeRole();
         } else { renderEmployees();}
     })
