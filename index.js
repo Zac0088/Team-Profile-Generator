@@ -134,3 +134,5 @@ addEmployee = () => {
         } else { renderEmployees();}
     })
 };
+
+renderHtml
