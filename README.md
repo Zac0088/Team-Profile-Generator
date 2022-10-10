@@ -23,9 +23,11 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 
 # Screen Shots #
-
+![Screenshot](/Screenshot%20(71).png)
+![Screenshot](/Screenshot%20(72).png)
 
 # Link to App Demo Video #
-
+https://drive.google.com/file/d/19ah60rPCIxTmVO3CdkuSKs2Rx0ebokCl/view
 
 # Contact #
+[Zachary Smart on GitHub](https://github.com/Zac0088)
