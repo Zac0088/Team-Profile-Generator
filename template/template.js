@@ -1,4 +1,4 @@
-function manager {
+function managerCard {
     return `<div class="col"`>
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">
@@ -12,7 +12,7 @@ function manager {
         </div>
     </div>
 }
-function engineer {
+function engineerCard {
     return `<div class="col"`>
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">
@@ -26,7 +26,7 @@ function engineer {
         </div>
     </div>
 }
-function intern {
+function internCard {
     return `<div class="col"`>
     <div class= 'card shadow-md bg-white rounded'>
         <div class ="card-body">
@@ -39,4 +39,18 @@ function intern {
             </div>
         </div>
     </div>
+}
+function renderHtml(teamMembers) {
+    let employees = ``;
+    for (let i = 0; i < teamMembers.length; i++) {
+        if (teamMembers[i].getRole() = "Manager") {
+            employees += managerCard(teamMembers[i]);
+        }else if (teamMembers[i].getRole() == "Engineer") {
+            }employees += engineerCard(teamMembers[i]);
+            } else {
+                employees += internCard(teamMembers[i]);
+            }
+            }
+        }
+    }
 }
