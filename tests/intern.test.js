@@ -1,13 +1,14 @@
-const Engineer = require('../lib/engineer')
+const Intern = require('../lib/intern')
 describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
-            const obj = new Employee();
+            const obj = new Intern();
             expect(typeof (obj)).tobe("object");
         })
-        describe("getName function", () => {
-            const obj = new Employee('Jimbob');
-            expect(obj.getName()).tobe('Jimbob');
+        describe("getSchool", () => {
+            it("return name of school", ()=>{
+            const obj = new Intern('Peaberry Fudgewhistle', '1', 'testemail@gmail.com', 'USYD');
+            expect(obj.getSchool()).tobe('USYD');
         })
     })
-});
+})});
