@@ -7,7 +7,7 @@ describe("details", () => {
         })
         describe("getName function", () => {
             const obj = new Employee('Jimbob');
-            expect(obj.getName()).tobe('Jimbob');
+            expect(obj.getName()).toBe('Jimbob');
         })
     })
 });

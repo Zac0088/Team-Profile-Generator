@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const renderHtml = require('./template/template')
+const renderHtml = require('./template/template');
 const { inherits } = require("util");
 
-const Employee = require("./lib/employee");
+// const Employee = require("./lib/employee");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Manager = require("./lib/manager");

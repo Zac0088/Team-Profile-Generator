@@ -8,7 +8,7 @@ describe("details", () => {
         describe("getGithub function", () => {
             it("return Github name",()=>{
             const obj = new Engineer('Antonio Freewater', '2', 'testemail@gmail.com', 'Antoniofree');
-            expect(obj.getGithub()).tobe('Antoniofree');
+            expect(obj.getGithub()).toBe('Antoniofree');
         })
     })
 })});

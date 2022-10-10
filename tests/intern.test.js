@@ -8,7 +8,7 @@ describe("details", () => {
         describe("getSchool", () => {
             it("return name of school", ()=>{
             const obj = new Intern('Peaberry Fudgewhistle', '1', 'testemail@gmail.com', 'USYD');
-            expect(obj.getSchool()).tobe('USYD');
+            expect(obj.getSchool()).toBe('USYD');
         })
     })
 })});
