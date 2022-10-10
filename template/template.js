@@ -26,3 +26,17 @@ function engineer {
         </div>
     </div>
 }
+function intern {
+    return `<div class="col"`>
+    <div class= 'card shadow-md bg-white rounded'>
+        <div class ="card-body">
+            <div class="card-title bg-primary">
+                <h1>${intern.getRole()}</h1>
+                <h2 class="card-title">${intern.getName()}</h2>
+                <p class ="card-text">ID: ${intern.getID()}</p>
+                <p class ="card-text">${intern.getEmail()}</p>
+                <p class ="card-text">School: ${intern.getSchool()}</p>
+            </div>
+        </div>
+    </div>
+}
