@@ -1,9 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const renderHtml = require('./template/template');
-const { inherits } = require("util");
-
-// const Employee = require("./lib/employee");
+const Employee = require("./lib/employee");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Manager = require("./lib/manager");
@@ -79,7 +77,7 @@ addEngineer = () => {
         },
         {
             type: "input",
-            message: "Engineers Githun?",
+            message: "Engineers Github?",
             name: "github"
         }
     ]).then((response)=> {
@@ -117,6 +115,7 @@ addIntern = () => {
         const intern = new Intern(response.name, response.id, response.email, response.school);
         employees.push(intern);
         addEmployee();
+
     })
 };
 addEmployee = () => {
@@ -126,7 +125,7 @@ addEmployee = () => {
             type: "list",
             message: "Do you want to add more team members?",
             name: "add",
-            choices: [ "Yes", "No"]
+            choices: ["Yes", "No"]
         }
     ]).then(response => {
         if (response.add === "yes") {
@@ -145,4 +144,4 @@ renderEmployees = () => {
         }
 })
 }
-init()
+init();

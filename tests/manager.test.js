@@ -3,7 +3,7 @@ describe("details", () => {
     describe("init", () => {
         it("return object ", () => {
             const obj = new Manager();
-            expect(typeof (obj)).toBe("object");
+            expect(typeof(obj)).toBe("object");
         })
         describe("getOfficeNumber", () => {
             it("return office number ",()=>{
